@@ -4,5 +4,5 @@ Script: " ans;
 read -p "
 Args: " args;
 
-./get_script $ans $args
+./get_and_exec_script $ans $args
 
