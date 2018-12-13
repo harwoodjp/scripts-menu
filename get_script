@@ -4,7 +4,7 @@ for i in $(ls $SCRIPTS_PATH); do
   if [ "$1" = "$COUNT" ]
   then
     echo ""
-    sh "$SCRIPTS_PATH/$i"
+    sh $SCRIPTS_PATH/$i $2
   fi
   let COUNT=COUNT+1
 done

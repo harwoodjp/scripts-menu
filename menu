@@ -1,6 +1,8 @@
- read -n 1 -p "$(./get_scripts)
-Choice: " ans;
+read -n 1 -p "$(./get_scripts)
+Script: " ans;
 
+read -p "
+Args: " args;
 
-./get_script $ans
+./get_script $ans $args
 
