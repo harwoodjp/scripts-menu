@@ -1,0 +1,6 @@
+ read -n 1 -p "$(./get_scripts)
+Choice: " ans;
+
+
+./get_script $ans
+
