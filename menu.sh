@@ -6,13 +6,13 @@ Arg: " arg;
 }
 
 readIndex() {
-	read -n 1 -p "$(listScripts)
+	read -n 1 -p "$(listScripts $1)
 Index: " index;
 }
 
 listScripts() {
 	COUNT=0
-	for i in $(ls $SCRIPTS_PATH); do
+	for i in $(ls $1); do
 	  echo "$COUNT) $i"
 	  let COUNT=COUNT+1
 	done
@@ -20,19 +20,19 @@ listScripts() {
 
 runScript() {
 	COUNT=0
-	for i in $(ls $SCRIPTS_PATH); do
+	for i in $(ls $1); do
 	  if [ "$COUNT" = "$index" ]
 	  then
-	    sh $SCRIPTS_PATH/$i $arg
+	    sh $1/$i $arg
 	  fi
 	  let COUNT=COUNT+1
 	done
 }
 
 main() {
-	readIndex
+	readIndex $1 
 	readArg
-	runScript
+	runScript $1
 }
 
-main
+main $1
