@@ -6,11 +6,11 @@ Arg: " arg;
 }
 
 readIndex() {
-	read -n 1 -p "$(listScripts)
+	read -n 1 -p "$(_listScripts)
 Index: " index;
 }
 
-listScripts() {
+_listScripts() {
 	COUNT=0
 	for i in $(ls $SCRIPTS_PATH); do
 	  echo "$COUNT) $i"
