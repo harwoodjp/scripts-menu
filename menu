@@ -1,8 +1,0 @@
-read -n 1 -p "$(./get_scripts)
-Script: " ans;
-
-read -p "
-Args: " args;
-
-./get_and_exec_script $ans $args
-

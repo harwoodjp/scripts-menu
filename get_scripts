@@ -1,7 +1,0 @@
-source ./config
-
-COUNT=0
-for i in $(ls $SCRIPTS_PATH); do
-  echo "$COUNT) $i"
-  let COUNT=COUNT+1
-done
