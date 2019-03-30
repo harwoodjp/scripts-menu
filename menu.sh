@@ -1,4 +1,4 @@
-source /Users/justin.harwood/Projects/Misc/scripts-menu/config
+source /home/justin/Projects/scripts-menu/config
 
 readArg() {
 	read -p "
