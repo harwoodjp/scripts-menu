@@ -17,7 +17,7 @@ def main():
     index = int(getIndex(files))
     args = input("Args: ")
     scriptPath = "{scriptsPath}/{fileName}".format(scriptsPath=scriptsPath, fileName=files[index])
-    subprocess.check_call(scriptPath + " %s" % (args) , shell=True)
+    subprocess.check_call(scriptPath + " %s &"  % (args) , shell=True)
 
 if __name__ == "__main__":
    main()
