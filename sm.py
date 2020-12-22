@@ -12,12 +12,12 @@ def getIndex(files):
     subprocess.call(path, shell=True)
 
 def main():
-    scriptsPath = "/home/justin/.scripts"
+    scriptsPath = "/Users/justin/.scripts"
     files = listdir(scriptsPath)
     index = int(getIndex(files))
     args = input("Args: ")
     scriptPath = "{scriptsPath}/{fileName}".format(scriptsPath=scriptsPath, fileName=files[index])
-    subprocess.check_call(scriptPath + " %s &"  % (args) , shell=True)
+    subprocess.check_call(scriptPath + " %s"  % (args) , shell=True)
 
 if __name__ == "__main__":
    main()
